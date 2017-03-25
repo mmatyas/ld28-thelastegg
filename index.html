@@ -31,12 +31,47 @@
 		canvas {
 			-ms-touch-action: none;
 		}
+		#menubar {
+			width: 100%;
+			height: 4em;
+			text-align: center;
+			font-family: sans-serif;
+		}
+		#menubar a {
+			text-decoration: none;
+		}
+		#menubar > div {
+			width: 85%;
+			height: 100%;
+			margin: 0 auto;
+		}
+		#menubar span {
+			color: #D3D7CF;
+			line-height: 4em;
+			height: 100%;
+			width: 33%;
+			float: left;
+			display: inline-block;
+			font-weight: bold;
+			transition: font-weight 0.3s, letter-spacing 1.3s;
+		}
+		#menubar a:hover span, #menubar a:active span {
+			color: white;
+			letter-spacing: 1px;
+		}
 	</style>
 	
 
 </head> 
  
 <body> 
+    <div id="menubar">
+        <div>
+        	<a href="../"><span>Back to main page</span></a>
+			<span>Theme: You Only Get One</span>
+			<a href="http://www.ludumdare.com/compo/ludum-dare-28/?action=preview&uid=26652"><span>Ludum Dare #28 entry page</span></a>
+        </div>
+    </div>
 	<div id="fb-root"></div>
 	<div style="text-align: center;">
 
@@ -52,7 +87,7 @@
 	</script>
 
 		<!-- The canvas must be inside a div called c2canvasdiv -->
-		<div id="c2canvasdiv" style="width: 800px; height: 600px;">
+		<div id="c2canvasdiv" style="margin: 20px auto; width: 800px; height: 600px;">
 		
 			<!-- The canvas the project will render to.  If you change its ID, don't forget to change the
 			ID the runtime looks for in the jQuery ready event (above). -->
